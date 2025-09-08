@@ -10,8 +10,9 @@ import numpy as np
 import time
 
 # Training data
-X = [1, 2]
-Y = [2, 3]
+np.random.seed(0)   # for reproducibility
+X = np.array([1, 2, 3, 4, 5])
+Y = X + 1 + np.random.normal(0, 0.2, size=5)  # add noise with std=0.2
 m = len(X)
 
 # Initialize parameters
